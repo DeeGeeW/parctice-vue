@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="calculator.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+    <div>1st number: <input type="text" v-model="n1"></div>
+    <div>2nd number: <input type="text" v-model="n2"></div>
+    <div>3rd number: <input type="text" v-model="n3"></div>
+    <div><button @click="computeSum()">Compute sum</button></div>
+    <div><button @click="multiplySum()">Multiply sum</button></div>
+    <div><button @click="squareNumber1()">Square n1!</button></div>
+    <p>The sum is: {{ sum }}</p>
+    <p>The multiplied total is: {{ total }}</p>
+    <p>The squared n1 is: {{ squared }}</p>
+    <div>
+      <h2>Extra info!</h2>
+      <button v-on:click="showInfo = !showInfo">Toggle</button>
+      <p v-if="showInfo"> testing toggle</p>
+      <p v-else>cool it works</p>
+    </div>
+    
+  </div>
+</body>
+</html>
